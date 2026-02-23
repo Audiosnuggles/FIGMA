@@ -1,0 +1,482 @@
+/* Frame Component Styles - The Pigeon Music Sequencer */
+
+/* Global reset and base styling for the Frame component */
+.frame-container {
+  font-family: 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom CSS variables for consistent colors throughout the design */
+:root {
+  /* Primary Colors */
+  --color-pink: #ff6385;
+  --color-cyan: #67d7ff;
+  --color-yellow: #ffd653;
+  --color-green: #6eff89;
+  
+  /* UI Colors */
+  --color-bg-main: #f7f7f7;
+  --color-bg-control: #d9d9d9;
+  --color-bg-button: #f0eff0;
+  --color-dark-gray: #555;
+  --color-medium-gray: #898787;
+  --color-light-gray: #d2d2d2;
+  --color-border: #999;
+  --color-border-light: #bbb;
+  --color-border-lightest: #d1d1d1;
+  
+  /* Button States */
+  --color-button-active: #555;
+  --color-button-inactive: #d2d2d2;
+  --color-red: #f33434;
+  --color-help: #dcff67;
+}
+
+/* Typography Styles */
+.text-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 23.5px;
+  line-height: 26px;
+  color: var(--color-dark-gray);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-label {
+  font-family: 'Arial', sans-serif;
+  font-size: 11.5px;
+  line-height: normal;
+  color: var(--color-dark-gray);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-label-small {
+  font-family: 'Arial', sans-serif;
+  font-size: 10px;
+  line-height: normal;
+  color: var(--color-dark-gray);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-label-medium {
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+  line-height: normal;
+  color: var(--color-dark-gray);
+  font-weight: bold;
+  font-style: normal;
+}
+
+.text-control {
+  font-family: 'Arial', sans-serif;
+  font-size: 14.5px;
+  line-height: normal;
+  color: var(--color-dark-gray);
+  font-weight: bold;
+  font-style: normal;
+}
+
+.text-control-regular {
+  font-family: 'Arial', sans-serif;
+  font-size: 14.5px;
+  line-height: normal;
+  color: var(--color-dark-gray);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-button {
+  font-family: 'Arial', sans-serif;
+  font-size: 11.5px;
+  line-height: normal;
+  color: #292929;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-sync-button {
+  font-family: 'Arial', sans-serif;
+  font-size: 11.5px;
+  line-height: normal;
+  color: #ececec;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-help {
+  font-family: 'Arial', sans-serif;
+  font-size: 11.5px;
+  line-height: normal;
+  color: #1f1f1f;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-pattern-small {
+  font-family: 'Arial', sans-serif;
+  font-size: 9.5px;
+  line-height: normal;
+  color: var(--color-dark-gray);
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Track Color Bars */
+.track-bar {
+  width: 26px;
+  height: 101px;
+  border-radius: 5px;
+}
+
+.track-bar-1 {
+  background-color: var(--color-pink);
+}
+
+.track-bar-2 {
+  background-color: var(--color-cyan);
+}
+
+.track-bar-3 {
+  background-color: var(--color-yellow);
+}
+
+.track-bar-4 {
+  background-color: var(--color-green);
+}
+
+/* Control Buttons */
+.control-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid var(--color-border);
+}
+
+.control-button-active {
+  background-color: var(--color-button-active);
+}
+
+.control-button-inactive {
+  background-color: var(--color-button-inactive);
+}
+
+.control-button-small {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid var(--color-border);
+}
+
+.control-button-tiny {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1px solid var(--color-border);
+}
+
+/* Slider Styles */
+.slider-vertical {
+  position: relative;
+  width: 72px;
+  height: 15px;
+}
+
+.slider-track {
+  fill: #d9d9d9;
+  stroke: var(--color-medium-gray);
+}
+
+.slider-fill {
+  fill: #0275ff;
+  stroke: var(--color-medium-gray);
+}
+
+/* Track Borders */
+.track-border {
+  border: 1px solid var(--color-border-light);
+  height: 101px;
+  width: 753px;
+}
+
+/* Tool Section */
+.tool-dropdown {
+  width: 72px;
+  height: 20px;
+  background-color: var(--color-bg-button);
+  border: 1px solid #767676;
+  border-radius: 2px;
+}
+
+/* Slider at bottom */
+.main-slider {
+  width: 72px;
+  height: 15px;
+}
+
+.main-slider-track {
+  fill: #d9d9d9;
+  stroke: var(--color-medium-gray);
+}
+
+.main-slider-fill {
+  fill: #0275ff;
+  stroke: var(--color-medium-gray);
+}
+
+/* Track Section Border */
+.track-section-border {
+  border: 1px solid var(--color-border-lightest);
+  height: 189px;
+  width: 925px;
+}
+
+/* Control Section */
+.control-section {
+  background-color: var(--color-bg-control);
+  height: 205px;
+  width: 964px;
+  box-shadow: inset 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+.control-button-large {
+  background-color: var(--color-bg-button);
+  border: 1px solid #626262;
+  border-radius: 2px;
+}
+
+.control-button-play {
+  width: 101px;
+  height: 34px;
+}
+
+.control-button-rec {
+  width: 101px;
+  height: 33px;
+}
+
+.control-button-import {
+  width: 121px;
+  height: 34px;
+}
+
+.control-button-export {
+  width: 121px;
+  height: 33px;
+}
+
+.control-button-tempo {
+  width: 56px;
+  height: 16px;
+}
+
+.control-checkbox {
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-bg-button);
+  border: 1px solid #626262;
+  border-radius: 2px;
+}
+
+/* EXT SYNC Button */
+.ext-sync-button {
+  width: 78px;
+  height: 24px;
+  background-color: var(--color-button-active);
+  border: 1px solid #626262;
+  border-radius: 12px;
+}
+
+.dropdown-arrow {
+  width: 28px;
+  height: 16px;
+  background-color: var(--color-bg-button);
+  border: 1px solid #626262;
+  border-radius: 2px;
+}
+
+/* Pattern Grid */
+.pattern-square {
+  width: 33px;
+  height: 33px;
+  border-radius: 3px;
+  border: 1px solid var(--color-border);
+}
+
+.pattern-square-active {
+  box-shadow: inset -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.pattern-square-pink {
+  background-color: var(--color-pink);
+}
+
+.pattern-square-green {
+  background-color: var(--color-green);
+}
+
+.pattern-square-gray {
+  background-color: #929191;
+}
+
+/* SAVE Button */
+.save-button {
+  width: 51px;
+  height: 20px;
+  background-color: var(--color-bg-button);
+  border: 1px solid #767676;
+  border-radius: 2px;
+}
+
+.save-indicator {
+  width: 5px;
+  height: 5px;
+}
+
+/* Help Button */
+.help-button {
+  width: 43px;
+  height: 43px;
+  background-color: var(--color-help);
+  border-radius: 20px;
+}
+
+/* REC Indicator */
+.rec-indicator {
+  width: 8px;
+  height: 9px;
+}
+
+.rec-ellipse {
+  fill: #ff0000;
+}
+
+/* Dropdown Triangle */
+.dropdown-triangle {
+  fill: #767676;
+}
+
+/* Track Color Squares */
+.track-color-small {
+  width: 8px;
+  height: 8px;
+}
+
+.track-color-pink-small {
+  background-color: var(--color-pink);
+}
+
+.track-color-cyan-small {
+  background-color: var(--color-cyan);
+}
+
+/* Divider Lines */
+.divider-horizontal {
+  stroke: #dddddd;
+}
+
+.divider-vertical {
+  stroke: #dddcde;
+}
+
+/* Shadow Effects */
+.shadow-inset-button {
+  box-shadow: inset -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-inset-control {
+  box-shadow: inset 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .frame-container {
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+}
+
+@media (max-width: 768px) {
+  .frame-container {
+    transform: scale(0.7);
+    transform-origin: top left;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame-container {
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+}
+
+/* Hover effects for interactive elements */
+.control-button:hover,
+.control-button-small:hover,
+.pattern-square:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.tool-dropdown:hover,
+.control-button-large:hover,
+.save-button:hover {
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+
+.help-button:hover {
+  background-color: #d0f050;
+  cursor: pointer;
+}
+
+/* Animation for REC indicator */
+@keyframes pulse-rec {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.rec-indicator.recording {
+  animation: pulse-rec 1s ease-in-out infinite;
+}
+
+/* Utility classes */
+.absolute-centered {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.rotate-minus-90 {
+  transform: rotate(-90deg);
+}
+
+/* Track waveform visualization area */
+.waveform-area {
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Grid background pattern */
+.grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
